@@ -20,10 +20,8 @@ export default {
     deleteConfirm: "Are you sure you want to delete this employee?",
     yes: "Yes",
     no: "No",
-
-    /**
-     * 🔹 Buraya eklediğiniz kısım:
-     */
+    next: ">",
+    prev: "<",
     departments: ["Analytics", "Tech"],
     positions: ["Junior", "Medior", "Senior"],
   },

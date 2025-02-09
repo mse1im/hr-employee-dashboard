@@ -20,10 +20,8 @@ export default {
     deleteConfirm: "Bu çalışanı silmek istediğinize emin misiniz?",
     yes: "Evet",
     no: "Hayır",
-
-    /**
-     * 🔹 Buraya eklediğiniz kısım:
-     */
+    next: ">",
+    prev: "<",
     departments: ["Analiz", "Teknoloji"],
     positions: ["Yeni", "Orta", "Kıdemli"],
   },
