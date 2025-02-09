@@ -5,14 +5,12 @@ import { Router } from "@vaadin/router";
 import store, { RootState } from "../store/store";
 
 import "./Navbar.ts";
-import "../pages/AddEmployeePage.ts";
-import "../pages/EditEmployeePage.ts";
 import "../pages/EmployeePage.ts";
 import "../pages/NotFoundPage.ts";
 
 @customElement("app-container")
 export class App extends connect(store)(LitElement) {
-  @state() language: string = "tr"; // ✅ Varsayılan dil
+  @state() language: string = "tr";
 
   createRenderRoot() {
     return this;
@@ -20,7 +18,7 @@ export class App extends connect(store)(LitElement) {
 
   stateChanged(state: RootState) {
     this.language = state.language.language;
-    document.documentElement.lang = this.language; // ✅ HTML `lang` güncellemesi
+    document.documentElement.lang = this.language;
   }
 
   firstUpdated() {
@@ -30,16 +28,14 @@ export class App extends connect(store)(LitElement) {
     router.setRoutes([
       { path: "/", component: "employee-page" },
       { path: "/employees", component: "employee-page" },
-      { path: "/add-employee", component: "add-employee-page" },
-      { path: "/edit-employee", component: "edit-employee-page" },
       { path: "(.*)", component: "not-found-page" }
     ]);
   }
 
   render() {
     return html`
-      <app-navbar></app-navbar> <!-- 📌 Navbar burada çağrıldı! -->
-      <div id="outlet"></div> <!-- 📌 Sayfa içerikleri burada değişecek -->
+      <app-navbar></app-navbar>
+      <div id="outlet"></div>
     `;
   }
 }
