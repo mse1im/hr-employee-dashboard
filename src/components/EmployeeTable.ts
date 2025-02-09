@@ -191,7 +191,6 @@ export class EmployeeTable extends connect(store)(LitElement) {
       </div>
 
       <div class="flex justify-center gap-2 mt-4">
-        <!-- Önceki Sayfa -->
         <button
           class="px-4 py-2 cursor-pointer text-[#ff6101] rounded-full disabled:text-gray-400 disabled:cursor-not-allowed"
           @click="${() => this.changePage(this.currentPage - 1)}"
